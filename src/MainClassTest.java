@@ -15,4 +15,11 @@ public class MainClassTest {
         int result = mainClass.getClassNumber();
         Assertions.assertTrue(result > 45, "метод getClassNumber возвращает число больше 45");
     }
+
+    @Test
+    public void testGetClassString() {
+        MainClass mainClass = new MainClass();
+        String result = mainClass.getClassString();
+        Assertions.assertTrue(result.contains("hello") || result.contains("Hello"), "метод getClassString возвращает строку, в которой есть подстрока 'hello' или 'Hello'");
+    }
 }
